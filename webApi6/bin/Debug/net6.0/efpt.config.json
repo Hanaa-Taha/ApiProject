@@ -1,0 +1,74 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "DbsmartagricultureContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": null,
+   "ProjectRootNamespace": "webApi6",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Tbl_Cart]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_CartStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_IotUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_MemberRole]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Members]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Product]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_ShippingDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tbl_SlideImage]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "DESKTOP-EQKKVG6\\SQLSERVERTWO.dbSmartAgriculture",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}
