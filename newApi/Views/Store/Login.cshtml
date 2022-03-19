@@ -1,0 +1,154 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/login_proStore.css" />
+    <title>Sign in & Sign up Form</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                    <h2 class="title">تسجيل الدخول</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="اسم المستخدم" id="login_user" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="الرقم السري" id="login_password" />
+                    </div>
+                    <a href="#" class="forget">لقد نسيت الرقم السري؟</a>
+                    <input type="submit" value="تسجيل" class="btn solid" id="sign_in" />
+                    <p class="social-text">أو سجل عن طريق حسابك علي مواقع التواصل الإجتماعي</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+
+
+                <!--register form-->
+                <form action="#" class="sign-up-form">
+                    <h2 class="title">إنشاء حساب</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="اسم المستخدم" id="register_user" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="البريد الإلكتروني" id="email" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-phone-alt"></i>
+                        <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف" pattern="^01[0-2]\d{1,8}$" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="الرقم السري" id="register_password" />
+                    </div>
+
+                    <!--seller or buyer or both-->
+                    <p class="choice_text">
+                        :اختر ماذا تريد أن تكون
+                    </p>
+                    <div class="choice_container">
+                        <label class="choice">
+                            بائع
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+
+                        </label>
+                        <label class="choice">
+                            مشتري
+
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="choice">
+                            كليهما
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!--sign_up button-->
+
+                    <input type="submit" class="btn" value="إنشاء" id="sign_up" />
+                    <p class="social-text">أو أنشئ حسابك عن طريق حسابك علي مواقع التواصل الإجتماعي</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>هل أنت جديد هنا؟</h3>
+                    <p>
+                        يمكنك الآن إنشاء حساب علي موقعنا و بيع و شراء المنتجات الزراعية و أيضا التمتع بمميزات موقعنا الكثيرة و المختلفة
+                    </p>
+                    <button class="btn transparent" id="sign-up-btn">
+                        إنشاء حساب
+                    </button>
+                </div>
+                <img src="~/lib/Images/فزاعة.png" class="image" alt="" />
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>هل لديك حساب من قبل ؟</h3>
+                    <p>
+                        إذا كان لديك حساب علي موقعنا الإلكتروني يمكنك تسجيل الدخول من هنا
+                    </p>
+                    <button class="btn transparent" id="sign-in-btn">
+                        تسجيل الدخول
+                    </button>
+                </div>
+                <img src="~/lib/Images/بوابة المزرعة.png" class="image" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/login_proStore.js"></script>
+
+</body>
+</html>

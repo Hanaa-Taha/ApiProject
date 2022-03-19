@@ -1,0 +1,499 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+
+}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/iconsDashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/styleDashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    <script src="main.js"></script>
+
+
+</head>
+<body>
+    <div class="dashboard">
+        <section class="navigation">
+            <div>
+                <a href="#main"><span class="material-icons-outlined">dashboard</span></a>
+                <a href="#control"><span class="material-icons-outlined"> build </span></a>
+                <span class="material-icons-outlined">trending_up</span>
+                <span class="material-icons-outlined">insert_invitation</span>
+                <span class="material-icons-outlined"> settings_suggest </span>
+                <span class="material-icons-outlined">logout</span>
+            </div>
+            <img src="https://www.icmetl.org/wp-content/uploads/2020/11/user-icon-human-person-sign-vector-10206693.png" alt="user image" class="user">
+
+        </section>
+
+        <section class="main" id="main">
+            <div class="search">
+                <div class="notifications">
+                    <span class="material-icons-outlined">notifications</span>
+                    <span class="material-icons-outlined">edit</span>
+                </div>
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="ابحث هنا">
+                    <span class="material-icons-outlined">search</span>
+
+                </form>
+
+            </div>
+            <!-- <div class="title">
+              <h1>بياناتي</h1>
+               <form action="">
+                <select name="" id="">
+                  <option value="soilTemperature">soil temperature</option>
+                  <option value="soilMoisture">soil moisture</option>
+                  <option value="atmosphericPressure">Atmospheric pressure</option>
+                  <option value="illumination">Intensity of illumination</option>
+                  <option value="tempture">temperature</option>
+                  <option value="moisture">moisture</option>
+
+                </select>
+              </form>
+            </div>  -->
+            <section class="weather">
+            </section>
+            <div class="info_list">
+                <div class="info">
+                    <div class="category"></div>
+                    <div class="flex">
+                        <h2>درجة حرارة التربة</h2>
+                        <span class="material-icons-outlined">thermostat</span>
+
+                    </div>
+                    <div class="colume">
+                        <p id="soilTemp"></p>
+                        <meter id="soilTempmeter" max="100" min="-100" low="25" high="30" optimum="20"></meter>
+                    </div>
+
+
+                </div>
+                <div class="info">
+                    <div class="category category_color1"></div>
+                    <div class="flex">
+                        <h2>رطوبة التربة</h2>
+                        <span class="material-icons-outlined">water_drop</span>
+
+                    </div>
+
+                    <div class="gauge">
+
+                        <div class="gauge__body">
+                            <div class="gauge__fill category_color1"></div>
+                            <div class="gauge__cover"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="category category_color2"></div>
+                    <div class="flex">
+                        <h2> الضغط الجوي</h2>
+                        <span class="material-icons-outlined">speed</span>
+
+                    </div>
+
+                    <div class="gauge">
+
+                        <div class="gauge__body">
+                            <div class="gauge__fill category_color2"></div>
+                            <div class="gauge__cover"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="category category_color3"></div>
+                    <div class="flex">
+                        <h2>شدة الإضاءة</h2>
+                        <span class="material-icons-outlined">light</span>
+
+                    </div>
+
+                    <div class="gauge">
+
+                        <div class="gauge__body">
+                            <div class="gauge__fill category_color3"></div>
+                            <div class="gauge__cover"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="category category_color4"></div>
+                    <div class="flex">
+                        <h2>درجة الحرارة</h2>
+                        <span class="material-icons-outlined">thermostat</span>
+
+                    </div>
+                    <div class="colume">
+                        <p id="airTemp"></p>
+                        <meter id="airTempmeter" max="100" min="-100" low="25" high="30" optimum="20"></meter>
+                    </div>
+
+
+
+
+                </div>
+                <div class="info">
+                    <div class="category category_color5"></div>
+                    <div class="flex">
+                        <h2>ملوحة التربة</h2>
+                        <span class="material-icons-outlined">water_drop</span>
+
+                    </div>
+
+                    <div class="gauge">
+
+                        <div class="gauge__body">
+                            <div class="gauge__fill category_color5"></div>
+                            <div class="gauge__cover"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" control" id="control">
+            <div class="controlbutton">
+                <button type="button" id="action" class="btn btn-outline-primary">تحكم الي</button>
+                <button type="button" id="action1" class="btn btn-outline-secondary">تحكم يدوي</button>
+            </div>
+            <div>
+                <div class="flexSwitchWater">
+                    <label class="switch">
+
+                        <input id="waterSwich" type="checkbox" disabled>
+                        <span class="slider round"></span>
+                    </label>
+                    <strong style="color: black;">مفتاح الماء</strong>
+
+                </div>
+
+                <div class="flexSwitchWater">
+                    <label class="switch">
+                        <input id="fertSwich" type="checkbox" disabled>
+                        <span class="slider round"></span>
+                    </label>
+                    <strong style="color: black;">مفتاح التسميد</strong>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="module">
+
+        const gaugeElement = document.querySelector(".gauge");
+        const gaugeElement1 = document.querySelectorAll(".gauge")[1];
+
+        const gaugeElement2 = document.querySelectorAll(".gauge")[2];
+        const gaugeElement3 = document.querySelectorAll(".gauge")[3];
+        const soilTempmeter = document.getElementById('soilTempmeter');
+        const soilTemp = document.getElementById('soilTemp');
+        const airTempmeter = document.getElementById('airTempmeter');
+        const airTemp = document.getElementById('airTemp');
+        const auto = document.getElementById("action");
+        const manual = document.getElementById("action1");
+        function setGaugeValue(gauge, value) {
+            if (value < 0 || value > 1) {
+                return;
+            }
+
+            gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2
+                }turn)`;
+            gauge.querySelector(".gauge__cover").textContent = `${Math.round(
+                value * 100
+            )}`;
+        }
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyC-yIUJ4vRjf6UUeQW_4j0zIqPphI2Bh_Y",
+            authDomain: "iotfarmsystem.firebaseapp.com",
+            databaseURL: "https://iotfarmsystem-default-rtdb.firebaseio.com",
+            projectId: "iotfarmsystem",
+            storageBucket: "iotfarmsystem.appspot.com",
+            messagingSenderId: "576170551394",
+            appId: "1:576170551394:web:081f20675f679ccf5bc93b",
+            measurementId: "G-95J4P66NFL"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        var ischecked = document.getElementById('waterSwich').checked;
+
+        import { getDatabase, ref, get, child, update, remove }
+            from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+        const db = getDatabase();
+
+        function readData() {
+            const dbref = ref(db);
+            get(child(dbref, "userId2/sensors")).then((snapshot) => {
+                if (snapshot.exists()) {
+                    setGaugeValue(gaugeElement, '0.0' + snapshot.val().moisture);
+                    setGaugeValue(gaugeElement1, '0.0' + snapshot.val().pressure);
+                    setGaugeValue(gaugeElement2, '0.0' + snapshot.val().luminous);
+                    setGaugeValue(gaugeElement3, '0.0' + snapshot.val().ph);
+                    soilTempmeter.value = snapshot.val().soilTemp;
+                    soilTemp.innerText = snapshot.val().soilTemp + 'C';
+                    airTempmeter.value = snapshot.val().soilTemp;
+                    airTemp.innerText = snapshot.val().airTemp + 'C';
+                    // console.log(snapshot.val().PHSensor);
+                    // console.log(snapshot.val().hSensor);
+                    // console.log('isauto'+snapshot.val().isAuto);
+                    // console.log(snapshot.val().tempSensor);
+                    // console.log(snapshot.val().waterSwitch);
+                    console.log(document.getElementById('waterSwich').disabled)
+                    get(child(dbref, "userId2/control")).then((snapshot2) => {
+                        console.log(snapshot2.val())
+                        if (snapshot2.val().isAuto == 0) {
+                            document.getElementById('waterSwich').disabled = false;
+                            document.getElementById('fertSwich').disabled = false;
+
+
+                        } else {
+                            document.getElementById('waterSwich').disabled = true;
+                            document.getElementById('fertSwich').disabled = true;
+
+
+                        }
+                    });
+                } else {
+                    console.log('data not found');
+                }
+
+            });
+        }
+        function updateData() {
+            update(ref(db, "userId2/control"), {
+
+                isAuto: true
+
+            }).then(() => {
+
+                swal("وضع التحكم الالي يعمل ");
+                document.getElementById('waterSwich').disabled = true;
+                document.getElementById('fertSwich').disabled = true;
+
+
+            }).catch((error) => {
+                alert(error);
+            });
+        } function updateData1() {
+            update(ref(db, "userId2/control"), {
+                isAuto: false
+
+            }).then(() => {
+
+                swal("وضع التحكم اليدوي يعمل ");
+                document.getElementById('waterSwich').disabled = false;
+                document.getElementById('fertSwich').disabled = false;
+
+            }).catch((error) => {
+                alert(error);
+            });
+        }
+        function OpenwaterSwitch() {
+            update(ref(db, "userId2/control"), {
+                waterSwitch: true
+            }).then(() => {
+
+                swal("مفتاح الماء مفتوح");
+
+            }).catch((error) => {
+                (error);
+            });
+        }
+        function OpenfertSwitch() {
+            update(ref(db, "userId2/control"), {
+                fertSwitch: true
+            }).then(() => {
+
+                swal("مفتاح التسميد مفتوح");
+
+            }).catch((error) => {
+                alert(error);
+            });
+        }
+
+
+        function ClosedwaterSwitch() {
+            update(ref(db, "userId2/control"), {
+                waterSwitch: false
+            }).then(() => {
+                swal("مفتاح الماء مغلق");
+            }).catch((error) => {
+                alert(error);
+            });
+        }
+        function ClosedfertSwitch() {
+            update(ref(db, "userId2/control"), {
+                fertSwitch: false
+            }).then(() => {
+                swal("مفتاح التسميد مغلق");
+            }).catch((error) => {
+                alert(error);
+            });
+        }
+        function waterSwitchValue() {
+            const dbref = ref(db);
+            get(child(dbref, "userId2/control")).then((snapshot) => {
+                if (snapshot.exists()) {
+                    if (snapshot.val().isAuto == 1) {
+                        if (snapshot.val().waterSwitch == 1) {
+                            document.getElementById('waterSwich').checked = true;
+                        } else if (snapshot.val().waterSwitch == 0) {
+                            document.getElementById('waterSwich').checked = false;
+                        }
+                        if (snapshot.val().fertSwitch == 1) {
+                            document.getElementById('fertSwich').checked = true;
+                        } else if (snapshot.val().fertSwitch == 0) {
+                            document.getElementById('fertSwich').checked = false;
+                        }
+                    }
+
+                } else {
+                    console.log('data not found');
+                }
+
+            });
+
+        }
+        setInterval(readData, 60000);
+        setInterval(waterSwitchValue, 1000);
+        document.getElementById('waterSwich').addEventListener('change', function () {
+            if (document.getElementById('waterSwich').disabled == false) {
+
+                if (this.checked) {
+                    OpenwaterSwitch();
+                } else {
+                    ClosedwaterSwitch();
+                }
+            }
+        })
+        document.getElementById('fertSwich').addEventListener('change', function () {
+            if (document.getElementById('fertSwich').disabled == false) {
+
+                if (this.checked) {
+                    OpenfertSwitch();
+                } else {
+                    ClosedfertSwitch();
+                }
+            }
+        })
+
+
+        window.addEventListener('load', readData);
+        document.getElementById("action").addEventListener('click', updateData);
+        document.getElementById("action1").addEventListener('click', updateData1);
+
+
+    </script>
+
+    <!-- <script type="module">
+
+    const gaugeElement = document.querySelector(".gauge");
+       const gaugeElement1= document.querySelectorAll(".gauge")[1];
+
+       const gaugeElement2= document.querySelectorAll(".gauge")[2];
+       const gaugeElement3= document.querySelectorAll(".gauge")[3];
+
+       function setGaugeValue(gauge, value) {
+      if (value < 0 || value > 1) {
+        return;
+      }
+
+      gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+        value / 2
+      }turn)`;
+      gauge.querySelector(".gauge__cover").textContent = `${Math.round(
+        value * 100
+      )}%`;
+    }
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyC-yIUJ4vRjf6UUeQW_4j0zIqPphI2Bh_Y",
+          authDomain: "iotfarmsystem.firebaseapp.com",
+          databaseURL: "https://iotfarmsystem-default-rtdb.firebaseio.com",
+          projectId: "iotfarmsystem",
+          storageBucket: "iotfarmsystem.appspot.com",
+          messagingSenderId: "576170551394",
+          appId: "1:576170551394:web:081f20675f679ccf5bc93b",
+          measurementId: "G-95J4P66NFL"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import {getDatabase,ref,get,child,update,remove}
+        from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+        const db=getDatabase();
+
+        function readData(){
+          const dbref=ref(db);
+          get(child(dbref,"UserId2")).then((snapshot)=>{
+            if(snapshot.exists()){
+            setGaugeValue(gaugeElement, '0.0'+snapshot.val().PHSensor);
+            setGaugeValue(gaugeElement1, 0.09);
+            setGaugeValue(gaugeElement2, 0.5);
+            setGaugeValue(gaugeElement3, 0.1);
+              console.log(snapshot.val().PHSensor);
+              console.log(snapshot.val().hSensor);
+              console.log(snapshot.val().isAuto);
+              console.log(snapshot.val().tempSensor);
+              console.log(snapshot.val().waterSwitch);
+            }else{
+              alert('data not found');
+            }
+
+          });
+        }
+        function updateData(){
+          update(ref(db,"UserId2"),{
+            PHSensor : 6
+          }).then(()=>{
+
+            alert("done");
+
+            }).catch((error)=>{
+              alert(error);
+            });
+            }
+            setInterval(readData,60000);
+        document.getElementsByClassName("action")[0].addEventListener('click',readData);
+
+        document.getElementsByClassName("action")[1].addEventListener('click',updateData);
+
+
+      </script> -->
+</body>
+</html>
